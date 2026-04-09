@@ -15,8 +15,8 @@ def get_members():
     return jsonify([
         {"id": 1, "name": "Mom",  "home": True},
         {"id": 2, "name": "Dad",  "home": False},
-        {"id": 3, "name": "Alex", "home": True},
-        {"id": 4, "name": "Sam",  "home": False},
+        {"id": 3, "name": "Gagan", "home": True},
+        {"id": 4, "name": "Shashank",  "home": False},
     ])
 
 @app.route("/api/members/<int:member_id>/toggle", methods=["POST"])

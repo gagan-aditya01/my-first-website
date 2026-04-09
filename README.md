@@ -8,9 +8,9 @@ A smart family shared dashboard built with Flask, SQLite, and vanilla JavaScript
 ## Features
 - 👨‍👩‍👧‍👦 Who's Home — toggle family members home/away
 - 🛒 Shared grocery list — add and delete items
-- 🌙 Dark mode toggle
-- 📱 Mobile-friendly responsive design
-- 💾 SQLite database — data persists across sessions
+-  Dark mode toggle
+-  Mobile-friendly responsive design
+-  SQLite database — data persists across sessions
 
 ## Tech Stack
 - **Backend:** Python, Flask, SQLite
@@ -32,4 +32,4 @@ A smart family shared dashboard built with Flask, SQLite, and vanilla JavaScript
    http://127.0.0.1:5000
 
 ## Built by
-Gagan & Shashank 🚀
+Gagan & Shashank

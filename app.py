@@ -26,12 +26,13 @@ def init_db():
                 item TEXT NOT NULL
             )
         """)
-        # Seed members if table is empty
-        if conn.execute("SELECT COUNT(*) FROM members").fetchone()[0] == 0:
-            conn.executemany(
-                "INSERT INTO members (name, home) VALUES (?, ?)",
-                [("Mom", 1), ("Dad", 0), ("Gagan", 1), ("Shashank", 0)]
-            )
+        # Always ensure members exist
+existing = conn.execute("SELECT COUNT(*) FROM members").fetchone()[0]
+if existing == 0:
+    conn.executemany(
+        "INSERT INTO members (name, home) VALUES (?, ?)",
+        [("Mom", 1), ("Dad", 0), ("Gagan", 1), ("Shashank", 0)]
+    )
         conn.commit()
 
 # ── Homepage ──────────────────────────────────────────────

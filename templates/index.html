@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Family Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+</head>
+<body>
+
+  <!-- ── Header ───────────────────────────────────────── -->
+  <header>
+    <h1>🏠 Family Dashboard</h1>
+    <p class="subtitle">Welcome home</p>
+  </header>
+
+  <main>
+
+    <!-- ── Who's Home ───────────────────────────────────── -->
+    <section class="card" id="whos-home">
+      <h2>Who's Home?</h2>
+      <div class="members-grid" id="members-grid">
+        <!-- Populated by JavaScript -->
+      </div>
+    </section>
+
+    <!-- ── Grocery List ─────────────────────────────────── -->
+    <section class="card" id="grocery-section">
+      <h2>🛒 Grocery List</h2>
+
+      <div class="grocery-input-row">
+        <input
+          type="text"
+          id="grocery-input"
+          placeholder="Add an item..."
+          autocomplete="off"
+        />
+        <button id="grocery-add-btn">Add</button>
+      </div>
+
+      <ul class="grocery-list" id="grocery-list">
+        <!-- Populated by JavaScript -->
+      </ul>
+
+      <p class="empty-msg" id="grocery-empty">No items yet. Add something above!</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Family Dashboard &copy; 2025</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

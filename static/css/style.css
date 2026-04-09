@@ -1,0 +1,218 @@
+/* ── Reset & Base ───────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f0f2f5;
+  color: #1a1a2e;
+  min-height: 100vh;
+}
+
+/* ── Header ─────────────────────────────────────────────── */
+header {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 28px 20px 24px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+header .subtitle {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-top: 4px;
+}
+
+/* ── Main Layout ────────────────────────────────────────── */
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── Cards ──────────────────────────────────────────────── */
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #1a1a2e;
+}
+
+/* ── Who's Home Grid ────────────────────────────────────── */
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 12px;
+}
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 12px;
+  border-radius: 12px;
+  border: 2px solid #e8e8e8;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.member-card:hover {
+  border-color: #667eea;
+  transform: translateY(-2px);
+}
+
+.member-card.home {
+  background: #f0fdf4;
+  border-color: #22c55e;
+}
+
+.member-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  background: #e8e8e8;
+  transition: background 0.2s ease;
+}
+
+.member-card.home .member-avatar {
+  background: #bbf7d0;
+}
+
+.member-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1a1a2e;
+}
+
+.member-status {
+  font-size: 0.75rem;
+  color: #888;
+  font-weight: 500;
+}
+
+.member-card.home .member-status {
+  color: #16a34a;
+}
+
+/* ── Grocery List ───────────────────────────────────────── */
+.grocery-input-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.grocery-input-row input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 2px solid #e8e8e8;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.grocery-input-row input:focus {
+  border-color: #667eea;
+}
+
+.grocery-input-row button {
+  padding: 10px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.grocery-input-row button:hover {
+  background: #5a6fd6;
+}
+
+.grocery-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.grocery-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  animation: slideIn 0.2s ease;
+}
+
+.grocery-list li .delete-btn {
+  background: none;
+  border: none;
+  color: #ccc;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0 4px;
+  transition: color 0.2s;
+  line-height: 1;
+}
+
+.grocery-list li .delete-btn:hover {
+  color: #ef4444;
+}
+
+.empty-msg {
+  text-align: center;
+  color: #bbb;
+  font-size: 0.9rem;
+  padding: 16px 0 4px;
+}
+
+/* ── Footer ─────────────────────────────────────────────── */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* ── Animation ──────────────────────────────────────────── */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Mobile ─────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  header h1 { font-size: 1.5rem; }
+  .card { padding: 18px; }
+  .members-grid { grid-template-columns: repeat(2, 1fr); }
+}

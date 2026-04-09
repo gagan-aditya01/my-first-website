@@ -216,3 +216,81 @@ footer {
   .card { padding: 18px; }
   .members-grid { grid-template-columns: repeat(2, 1fr); }
 }
+/* ── Dark Mode ──────────────────────────────────────────── */
+body.dark {
+  background: #0f0f1a;
+  color: #e8e8f0;
+}
+
+body.dark .card {
+  background: #1a1a2e;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+body.dark .card h2 {
+  color: #e8e8f0;
+}
+
+body.dark .member-card {
+  border-color: #2a2a3e;
+}
+
+body.dark .member-card:hover {
+  border-color: #667eea;
+}
+
+body.dark .member-card.home {
+  background: #0f2a1a;
+  border-color: #22c55e;
+}
+
+body.dark .member-avatar {
+  background: #2a2a3e;
+}
+
+body.dark .member-name {
+  color: #e8e8f0;
+}
+
+body.dark .grocery-input-row input {
+  background: #2a2a3e;
+  border-color: #3a3a4e;
+  color: #e8e8f0;
+}
+
+body.dark .grocery-input-row input:focus {
+  border-color: #667eea;
+}
+
+body.dark .grocery-list li {
+  background: #2a2a3e;
+  color: #e8e8f0;
+}
+
+body.dark .empty-msg {
+  color: #555;
+}
+
+/* ── Header content row ─────────────────────────────────── */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.dark-mode-btn {
+  background: rgba(255,255,255,0.15);
+  border: none;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dark-mode-btn:hover {
+  background: rgba(255,255,255,0.25);
+}

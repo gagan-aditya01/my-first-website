@@ -114,3 +114,21 @@ $('grocery-input').addEventListener('keydown', e => {
 // ── Init ──────────────────────────────────────────────────
 loadMembers();
 loadGrocery();
+
+
+
+// ── Dark Mode ─────────────────────────────────────────────
+const darkToggle = $('dark-mode-toggle');
+
+// Remember preference
+if (localStorage.getItem('darkMode') === 'true') {
+  document.body.classList.add('dark');
+  darkToggle.textContent = '☀️';
+}
+
+darkToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  const isDark = document.body.classList.contains('dark');
+  darkToggle.textContent = isDark ? '☀️' : '🌙';
+  localStorage.setItem('darkMode', isDark);
+});

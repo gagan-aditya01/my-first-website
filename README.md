@@ -1,4 +1,4 @@
-# 🏠 Family Dashboard
+#  Family Dashboard
 
 A smart family shared dashboard built with Flask, SQLite, and vanilla JavaScript.
 
@@ -6,8 +6,8 @@ A smart family shared dashboard built with Flask, SQLite, and vanilla JavaScript
 🌐 https://my-first-website-4sgx.onrender.com
 
 ## Features
-- 👨‍👩‍👧‍👦 Who's Home — toggle family members home/away
-- 🛒 Shared grocery list — add and delete items
+-  Who's Home — toggle family members home/away
+-  Shared grocery list — add and delete items
 -  Dark mode toggle
 -  Mobile-friendly responsive design
 -  SQLite database — data persists across sessions
@@ -32,4 +32,4 @@ A smart family shared dashboard built with Flask, SQLite, and vanilla JavaScript
    http://127.0.0.1:5000
 
 ## Built by
-Gagan & Shashank
+Gagan & Shashank 
